@@ -1,0 +1,73 @@
+/**
+*** MAIN RULES
+**/
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+/**
+*** ICONS
+**/
+
+.icon__todolist {
+  width: 32px;
+  margin-left: 10px;
+}
+
+.icon__trash {
+  width: 16px;
+}
+
+/**
+*** TODOLIST
+**/
+
+.todolist__container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.todolist__wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 600px;
+  width: 100%;
+  background-color: aliceblue;
+}
+
+.todolist form {
+}
+
+.todolist__items {
+  width: 100%;
+  padding: 20px;
+}
+
+.todolist__item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todolist__item__form-delete button {
+  cursor: pointer;
+}
