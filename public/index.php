@@ -6,6 +6,18 @@
     <title>Todolist</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
+
+<?php
+
+    $todos = [
+        'Clean the bathroom',
+        'Wash the car',
+        'Do the homework',
+        'Do the dishes'
+    ];
+
+?>
+
 <body>
     <main class="todolist__container">
         <div class="todolist todolist__wrapper">
@@ -15,30 +27,16 @@
                 <button type="submit">Add</button>
             </form>
             <ul class="todolist__items">
-                <li class="todolist__item">
-                    <p>Clean the bathroom</p>
-                    <form class="todolist__item__form-delete" action="#">
-                        <button type="submit">
-                            <img src="/img/trash-icon.png" alt="trash icon" class="icon__trash">
-                        </button>
-                    </form>
-                </li>
-                <li class="todolist__item">
-                    <p>Clean the bathroom</p>
-                    <form class="todolist__item__form-delete" action="#">
-                        <button type="submit">
-                            <img src="/img/trash-icon.png" alt="trash icon" class="icon__trash">
-                        </button>
-                    </form>
-                </li>
-                <li class="todolist__item">
-                    <p>Clean the bathroom</p>
-                    <form class="todolist__item__form-delete" action="#">
-                        <button type="submit">
-                            <img src="/img/trash-icon.png" alt="trash icon" class="icon__trash">
-                        </button>
-                    </form>
-                </li>
+                <?php foreach ($todos as $todo) { ?>
+                    <li class="todolist__item">
+                        <p><?= $todo ?></p>
+                        <form class="todolist__item__form-delete" action="#">
+                            <button type="submit">
+                                <img src="/img/trash-icon.png" alt="trash icon" class="icon__trash">
+                            </button>
+                        </form>
+                    </li>
+                <?php } ?>
             </ul>
         </div>
     </main>
